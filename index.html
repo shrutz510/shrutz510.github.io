@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shruti Wagle — Data Scientist & ML Engineer</title>
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #fafafa;
+      color: #1a1a1a;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── Typography ── */
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; letter-spacing: -0.02em; }
+    h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; letter-spacing: -0.01em; }
+    h3 { font-size: 1.05rem; font-weight: 600; }
+    p  { color: #555; }
+    a  { color: inherit; text-decoration: none; }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    section { padding: 80px 0; }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: rgba(250,250,250,0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #eee;
+      z-index: 100;
+    }
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+    }
+    nav .logo { font-weight: 700; font-size: 1rem; letter-spacing: -0.01em; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+    nav ul li a {
+      font-size: 0.88rem;
+      color: #555;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav ul li a:hover { color: #1a1a1a; }
+
+    /* ── Hero ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 60px;
+    }
+    #hero .container { padding-top: 40px; }
+    .hero-eyebrow {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 16px;
+    }
+    #hero h1 { margin-bottom: 20px; }
+    #hero .tagline {
+      font-size: 1.15rem;
+      color: #666;
+      max-width: 520px;
+      margin-bottom: 36px;
+    }
+    .hero-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: #1a1a1a;
+      color: #fff;
+    }
+    .btn-primary:hover { background: #333; }
+    .btn-outline {
+      border: 1.5px solid #d0d0d0;
+      color: #333;
+    }
+    .btn-outline:hover { border-color: #1a1a1a; }
+
+    /* ── Section Headers ── */
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+    .section-title { margin-bottom: 12px; }
+    .section-desc { color: #666; max-width: 480px; margin-bottom: 48px; }
+    .divider { width: 40px; height: 3px; background: #1a1a1a; border-radius: 2px; margin: 16px 0 44px; }
+
+    /* ── About ── */
+    #about { background: #fff; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .about-text p { margin-bottom: 16px; }
+    .about-facts { display: flex; flex-direction: column; gap: 18px; }
+    .fact {
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .fact-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; margin-bottom: 4px; }
+    .fact-value { font-size: 0.95rem; font-weight: 600; color: #1a1a1a; }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .skill-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 22px 24px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .skill-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); transform: translateY(-2px); }
+    .skill-icon { font-size: 1.5rem; margin-bottom: 12px; }
+    .skill-card h3 { margin-bottom: 8px; font-size: 0.95rem; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 20px;
+      background: #f0f0f0;
+      color: #555;
+    }
+
+    /* ── Projects ── */
+    .projects-grid {
+      display: grid;
+      gap: 20px;
+    }
+    .project-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 14px;
+      padding: 28px 30px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: start;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .project-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+    .project-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .project-card p { font-size: 0.9rem; color: #666; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      padding: 6px 14px;
+      border: 1.5px solid #d0d0d0;
+      border-radius: 7px;
+      white-space: nowrap;
+      transition: border-color 0.2s;
+      flex-shrink: 0;
+    }
+    .project-link:hover { border-color: #1a1a1a; }
+
+    /* ── Contact ── */
+    #contact { background: #fff; border-top: 1px solid #eee; }
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+    .contact-info p { margin-bottom: 24px; }
+    .contact-links { display: flex; flex-direction: column; gap: 12px; }
+    .contact-link-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      border: 1.5px solid #eee;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .contact-link-item:hover { border-color: #1a1a1a; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+    .contact-link-item .icon { font-size: 1.1rem; }
+    .contact-form { display: flex; flex-direction: column; gap: 14px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      background: #fafafa;
+      color: #1a1a1a;
+      outline: none;
+      transition: border-color 0.2s;
+      resize: none;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus { border-color: #1a1a1a; background: #fff; }
+    .contact-form textarea { min-height: 110px; }
+
+    /* ── Footer ── */
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid #eee;
+      text-align: center;
+      font-size: 0.82rem;
+      color: #aaa;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 620px) {
+      .about-grid, .contact-wrapper { grid-template-columns: 1fr; gap: 32px; }
+      .form-row { grid-template-columns: 1fr; }
+      .project-card { grid-template-columns: 1fr; }
+      nav ul { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <div class="container">
+      <span class="logo">Shruti Wagle</span>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section id="hero">
+    <div class="container">
+      <p class="hero-eyebrow">Data Scientist &amp; ML Engineer</p>
+      <h1>Hi, I'm Shruti Wagle 👋</h1>
+      <p class="tagline">
+        I turn raw data into actionable insights — building machine learning models,
+        designing data pipelines, and crafting stories with data.
+      </p>
+      <div class="hero-links">
+        <a class="btn btn-primary" href="#projects">View My Work</a>
+        <a class="btn btn-outline" href="https://github.com/shrutiwagle" target="_blank" rel="noopener">
+          <!-- GitHub SVG icon -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          GitHub
+        </a>
+        <a class="btn btn-outline" href="mailto:shrutigwagle@gmail.com">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ── -->
+  <section id="about">
+    <div class="container">
+      <p class="section-label">About Me</p>
+      <h2 class="section-title">Passionate about data-driven solutions</h2>
+      <div class="divider"></div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a Data Scientist and Machine Learning Engineer with a passion for
+            solving real-world problems through data. I enjoy the full journey —
+            from exploratory analysis and feature engineering to model training,
+            evaluation, and deployment.
+          </p>
+          <p>
+            I thrive at the intersection of research and engineering, building
+            systems that are not just accurate but reliable and scalable. I'm
+            always learning, whether it's the latest advances in deep learning
+            or better ways to communicate insights to non-technical stakeholders.
+          </p>
+          <p>
+            Outside of work, you'll find me reading ML papers, contributing to
+            open-source projects, or experimenting with side projects that scratch
+            my curiosity.
+          </p>
+        </div>
+        <div class="about-facts">
+          <div class="fact">
+            <div class="fact-label">Focus Area</div>
+            <div class="fact-value">Machine Learning &amp; AI</div>
+          </div>
+          <div class="fact">
+            <div class="fact-label">GitHub</div>
+            <div class="fact-value">
+              <a href="https://github.com/shrutiwagle" target="_blank" rel="noopener"
+                 style="color:#1a1a1a; text-decoration:underline; text-underline-offset:3px;">
+                github.com/shrutiwagle
+              </a>
+            </div>
+          </div>
+          <div class="fact">
+            <div class="fact-label">Email</div>
+            <div class="fact-value">
+              <a href="mailto:shrutigwagle@gmail.com"
+                 style="color:#1a1a1a; text-decoration:underline; text-underline-offset:3px;">
+                shrutigwagle@gmail.com
+              </a>
+            </div>
+          </div>
+          <div class="fact">
+            <div class="fact-label">Available For</div>
+            <div class="fact-value">Full-time &amp; Freelance</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Skills ── -->
+  <section id="skills">
+    <div class="container">
+      <p class="section-label">Skills</p>
+      <h2 class="section-title">What I work with</h2>
+      <div class="divider"></div>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-icon">🤖</div>
+          <h3>Machine Learning</h3>
+          <p style="font-size:0.85rem; color:#777; margin-top:4px;">
+            Supervised &amp; unsupervised learning, model selection, evaluation.
+          </p>
+          <div class="skill-tags">
+            <span class="tag">scikit-learn</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">LightGBM</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🧠</div>
+          <h3>Deep Learning</h3>
+          <p style="font-size:0.85rem; color:#777; margin-top:4px;">
+            Neural networks, CNNs, transformers, NLP, and computer vision.
+          </p>
+          <div class="skill-tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">HuggingFace</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <h3>Data Analysis</h3>
+          <p style="font-size:0.85rem; color:#777; margin-top:4px;">
+            Exploratory analysis, statistical modeling, and visualization.
+          </p>
+          <div class="skill-tags">
+            <span class="tag">Pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Matplotlib</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">⚙️</div>
+          <h3>MLOps &amp; Engineering</h3>
+          <p style="font-size:0.85rem; color:#777; margin-top:4px;">
+            Model deployment, pipelines, monitoring, and CI/CD.
+          </p>
+          <div class="skill-tags">
+            <span class="tag">Docker</span>
+            <span class="tag">MLflow</span>
+            <span class="tag">FastAPI</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">☁️</div>
+          <h3>Cloud &amp; Data Infra</h3>
+          <p style="font-size:0.85rem; color:#777; margin-top:4px;">
+            Scalable pipelines and cloud-based ML workflows.
+          </p>
+          <div class="skill-tags">
+            <span class="tag">AWS</span>
+            <span class="tag">GCP</span>
+            <span class="tag">Spark</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">💬</div>
+          <h3>Languages</h3>
+          <p style="font-size:0.85rem; color:#777; margin-top:4px;">
+            Primary languages for data work and software engineering.
+          </p>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">R</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects ── -->
+  <section id="projects">
+    <div class="container">
+      <p class="section-label">Projects</p>
+      <h2 class="section-title">Things I've built</h2>
+      <div class="divider"></div>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div>
+            <h3>Predictive Churn Model</h3>
+            <p>
+              Built an end-to-end customer churn prediction pipeline using gradient
+              boosting, achieving 92% AUC. Includes automated feature engineering,
+              SHAP-based explainability, and a REST API for real-time scoring.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">XGBoost</span>
+              <span class="tag">SHAP</span>
+              <span class="tag">FastAPI</span>
+            </div>
+          </div>
+          <a class="project-link" href="https://github.com/shrutiwagle" target="_blank" rel="noopener">
+            View ↗
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>NLP Sentiment Analyzer</h3>
+            <p>
+              Fine-tuned a BERT-based model on product reviews for multi-class sentiment
+              classification. Deployed on Hugging Face Spaces with an interactive demo.
+              Handles 5,000+ inferences per minute.
+            </p>
+            <div class="project-tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">BERT</span>
+              <span class="tag">HuggingFace</span>
+              <span class="tag">Transformers</span>
+            </div>
+          </div>
+          <a class="project-link" href="https://github.com/shrutiwagle" target="_blank" rel="noopener">
+            View ↗
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>Time Series Forecasting Dashboard</h3>
+            <p>
+              Developed a forecasting system for sales data using Prophet and LSTM models.
+              Built an interactive Streamlit dashboard letting users explore forecasts,
+              confidence intervals, and seasonality decomposition.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Prophet</span>
+              <span class="tag">LSTM</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">Plotly</span>
+            </div>
+          </div>
+          <a class="project-link" href="https://github.com/shrutiwagle" target="_blank" rel="noopener">
+            View ↗
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">Let's work together</h2>
+      <div class="divider"></div>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <p>
+            I'm open to new opportunities, collaborations, and interesting conversations
+            about data and ML. Feel free to reach out — I usually respond within a day.
+          </p>
+          <div class="contact-links">
+            <a class="contact-link-item" href="mailto:shrutigwagle@gmail.com">
+              <span class="icon">✉️</span>
+              <span>shrutigwagle@gmail.com</span>
+            </a>
+            <a class="contact-link-item" href="https://github.com/shrutiwagle" target="_blank" rel="noopener">
+              <span class="icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </span>
+              <span>github.com/shrutiwagle</span>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <input type="text" placeholder="Your name" required />
+            <input type="email" placeholder="Your email" required />
+          </div>
+          <input type="text" placeholder="Subject" />
+          <textarea placeholder="Your message…" required></textarea>
+          <button type="submit" class="btn btn-primary" style="align-self:flex-start;">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Shruti Wagle · Built with ♥ and hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth active link highlighting
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav ul li a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 80) current = s.id;
+      });
+      navLinks.forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + current ? '#1a1a1a' : '';
+        a.style.fontWeight = a.getAttribute('href') === '#' + current ? '700' : '';
+      });
+    });
+
+    // Contact form demo handler
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.textContent = 'Sent! ✓';
+      btn.style.background = '#2a9d5c';
+      setTimeout(() => {
+        btn.textContent = 'Send Message';
+        btn.style.background = '';
+        e.target.reset();
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>
