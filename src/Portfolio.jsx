@@ -353,34 +353,35 @@ const Portfolio = () => {
       venue: 'Proceedings of the ACM on Web Conference 2025, pp. 3731-3750',
       year: '2025',
       authors: 'G Mittal, S Gupta, S Wagle, C Chopra, AJ DeMattee, N Memon, et al.',
+      link: 'https://dl.acm.org/doi/10.1145/3589334.3645640',
     },
     {
       title: 'Mitigating the impact of attribute editing on face recognition',
       venue: '2024 IEEE International Joint Conference on Biometrics (IJCB), pp. 1-10',
       year: '2024',
       authors: 'S Banerjee, SP Mullangi, S Wagle, C Hegde, N Memon',
-      cited: 2,
+      link: 'https://ieeexplore.ieee.org/abstract/document/10854232',
     },
     {
       title: 'Disguise face classification using efficientnet deep learning',
       venue: 'Human-Centric Smart Computing: Proceedings of ICHCSC 2022, pp. 305-314',
       year: '2022',
       authors: 'G Padmashree, SG Wagle, AK Karunakar',
-      cited: 3,
+      link: 'https://scholar.google.com/scholar?q=Disguise+face+classification+using+efficientnet+deep+learning',
     },
     {
       title: 'Sentiment classification of English and Hindi music lyrics using supervised machine learning algorithms',
       venue: '2022 2nd Asian Conference on Innovation in Technology (ASIANCON), pp. 1-6',
       year: '2022',
       authors: 'N Sumith, S Wagle, P Ghosh, K Kishore',
-      cited: 3,
+      link: 'https://ieeexplore.ieee.org/document/10015766',
     },
     {
       title: 'Adversarial jamming and catching games over AWGN channels with mobile players',
       venue: '2021 17th International Conference on Wireless and Mobile Computing',
       year: '2021',
       authors: 'G Perin, A Buratto, NM Anselmi, S Wagle, L Badia',
-      cited: 10,
+      link: 'https://ieeexplore.ieee.org/document/9700551',
     },
   ];
 
@@ -492,14 +493,6 @@ const Portfolio = () => {
             designing scalable architectures and crafting seamless user experiences.
           </p>
           <div style={styles.buttonGroup}>
-            <button
-              onClick={() => scrollToSection('projects')}
-              style={styles.button}
-              onMouseEnter={(e) => e.target.style.background = colors.primaryLight}
-              onMouseLeave={(e) => e.target.style.background = colors.primary}
-            >
-              View My Work
-            </button>
             <a
               href="https://github.com/shrutz510"
               target="_blank"
@@ -682,27 +675,20 @@ const Portfolio = () => {
               <div style={{ fontSize: '1.3rem' }}>📄</div>
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '4px', marginBottom: '4px' }}>
-                  <span style={{ fontSize: '1rem', fontWeight: 700, color: colors.darkText }}>{pub.title}</span>
+                  <a
+                    href={pub.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ fontSize: '1rem', fontWeight: 700, color: colors.primary, textDecoration: 'none', cursor: 'pointer' }}
+                    onMouseEnter={(e) => e.target.style.textDecoration = 'underline'}
+                    onMouseLeave={(e) => e.target.style.textDecoration = 'none'}
+                  >
+                    {pub.title}
+                  </a>
                   <span style={{ fontSize: '0.78rem', fontWeight: 600, color: '#aaa', whiteSpace: 'nowrap' }}>{pub.year}</span>
                 </div>
                 <div style={{ fontSize: '0.875rem', color: colors.gray, marginBottom: '10px' }}>{pub.venue}</div>
                 <p style={{ fontSize: '0.82rem', color: colors.gray, marginBottom: '8px' }}>{pub.authors}</p>
-                {pub.cited && (
-                  <span
-                    style={{
-                      display: 'inline-block',
-                      marginTop: '10px',
-                      fontSize: '0.72rem',
-                      fontWeight: 700,
-                      padding: '2px 9px',
-                      borderRadius: '20px',
-                      background: colors.lightBg,
-                      color: colors.primary,
-                    }}
-                  >
-                    Cited {pub.cited} times
-                  </span>
-                )}
               </div>
             </div>
           ))}
