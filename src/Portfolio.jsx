@@ -943,10 +943,25 @@ const Portfolio = () => {
                 </a>
               </div>
             </div>
-            <form style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+            <form
+              action="https://formspree.io/f/mldqgqjk"
+              method="POST"
+              style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}
+              onSubmit={(e) => {
+                const btn = e.currentTarget.querySelector('button[type="submit"]');
+                const originalText = btn.textContent;
+                btn.textContent = 'Message sent!';
+                btn.style.background = '#2a9d5c';
+                setTimeout(() => {
+                  btn.textContent = originalText;
+                  btn.style.background = '';
+                }, 3000);
+              }}
+            >
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your name"
                   required
                   style={{
@@ -966,6 +981,7 @@ const Portfolio = () => {
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Your email"
                   required
                   style={{
@@ -986,6 +1002,7 @@ const Portfolio = () => {
               </div>
               <input
                 type="text"
+                name="subject"
                 placeholder="Subject"
                 style={{
                   width: '100%',
@@ -1003,6 +1020,7 @@ const Portfolio = () => {
                 onBlur={(e) => e.target.style.borderColor = colors.lightGray}
               />
               <textarea
+                name="message"
                 placeholder="Your message…"
                 required
                 style={{
