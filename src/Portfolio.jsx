@@ -398,21 +398,27 @@ const Portfolio = () => {
       link: 'https://github.com/shrutz510/WavePulse',
     },
     {
+      title: 'Image Generation Analysis for Imbalanced Datasets',
+      description: 'Tackled class imbalance by analyzing different image generation techniques on the CIFAR10 dataset using non-synthetic, GAN, and Stable Diffusion data generation methods, achieving 85.40%, 85.55%, and 86.96% test accuracy respectively.',
+      tags: ['PyTorch', 'GANs', 'Stable Diffusion', 'Computer Vision', 'CIFAR10'],
+      link: 'https://github.com/uasth/ImageGenAnalysis',
+    },
+    {
       title: 'Distributed Data Parallelism for Language Models',
-      description: 'Scalable deep learning training system using PyTorch\'s DDP module achieving 20× speedup on 4 GPUs with a final loss of 1.14.',
+      description: 'Implemented a scalable deep learning pipeline using PyTorch\'s distributed data parallelism module to train a German-to-English translation model, achieving a speedup of 20 times on 4 GPUs versus a single CPU with a train loss of 1.14.',
       tags: ['PyTorch', 'Distributed Training', 'NLP', 'GPU'],
       link: 'https://github.com/shrutz510/Distributed-Data-Parallelism-for-Translator',
     },
     {
       title: 'Finance ML System: Loan Default Prediction',
-      description: 'ML pipeline for loan default prediction achieving 89.4% ROC-AUC using XGBoost and time-series analysis.',
+      description: 'Created a model to predict prospective borrowers\' default probability to enhance the bank\'s loan underwriting process using time-series analysis, financial feature engineering, and walk-forward analysis for optimal results. Achieved a ROC-AUC of 89.4% on test data.',
       tags: ['XGBoost', 'Time Series', 'Feature Engineering', 'Python'],
       link: 'https://github.com/shrutz510/Loan-Default-Prediction',
     },
     {
       title: 'ML Pipeline for Airbnb Property Analysis',
-      description: 'Full-system ML pipeline for large-scale Airbnb listing analysis using Azure Data Lake and PySpark with Random Forest classification.',
-      tags: ['PySpark', 'Azure', 'Random Forest', 'SQL'],
+      description: 'Gained insight into Airbnb hosts\' and guests\' issues through big-data analysis of the Global Listings dataset using Azure Data Lake Storage for data storage, PySpark for complex computations, and matplotlib for data visualization.',
+      tags: ['PySpark', 'Azure', 'Random Forest', 'SQL', 'Data Visualization'],
       link: 'https://github.com/shrutz510/Airbnb-Property-Listing-Analysis',
     },
   ];
