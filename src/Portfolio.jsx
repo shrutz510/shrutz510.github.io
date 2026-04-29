@@ -350,38 +350,43 @@ const Portfolio = () => {
   const publications = [
     {
       title: 'WavePulse: Real-time Content Analytics of Radio Livestreams',
-      venue: 'Proceedings of the ACM on Web Conference 2025, pp. 3731-3750',
+      venue: 'Proceedings of the ACM on Web Conference 2025',
       year: '2025',
       authors: 'G Mittal, S Gupta, S Wagle, C Chopra, AJ DeMattee, N Memon, et al.',
-      link: 'https://dl.acm.org/doi/10.1145/3589334.3645640',
+      link: 'https://dl.acm.org/doi/abs/10.1145/3696410.3714810',
+      abstract: 'Radio remains a pervasive medium for mass information dissemination. We present WavePulse, a framework that records, documents, and analyzes radio content in real-time. We monitored livestreams of 396 news radio stations over three months, processing close to 500,000 hours of audio streams converted into time-stamped, diarized transcripts.',
     },
     {
       title: 'Mitigating the impact of attribute editing on face recognition',
-      venue: '2024 IEEE International Joint Conference on Biometrics (IJCB), pp. 1-10',
+      venue: '2024 IEEE International Joint Conference on Biometrics (IJCB)',
       year: '2024',
       authors: 'S Banerjee, SP Mullangi, S Wagle, C Hegde, N Memon',
-      link: 'https://ieeexplore.ieee.org/abstract/document/10854232',
+      link: 'https://ieeexplore.ieee.org/abstract/document/10744430',
+      abstract: 'Through a large-scale study over diverse face images, we show that facial attribute editing using modern generative AI models can severely degrade automated face recognition systems. We propose two novel techniques for local and global attribute editing and empirically evaluate them on multiple datasets.',
     },
     {
       title: 'Disguise face classification using efficientnet deep learning',
-      venue: 'Human-Centric Smart Computing: Proceedings of ICHCSC 2022, pp. 305-314',
+      venue: 'Human-Centric Smart Computing: Proceedings of ICHCSC 2022',
       year: '2022',
       authors: 'G Padmashree, SG Wagle, AK Karunakar',
-      link: 'https://scholar.google.com/scholar?q=Disguise+face+classification+using+efficientnet+deep+learning',
+      link: 'https://link.springer.com/chapter/10.1007/978-981-19-5403-0_26',
+      abstract: 'With the rise in popularity of social media and intelligent gadgets, face recognition systems must be more accurate. This research proposes the EfficientNet family of models for disguise face classification. EfficientNet-B3 achieved 93.9% accuracy in detecting and classifying disguised faces, outperforming competing models.',
     },
     {
       title: 'Sentiment classification of English and Hindi music lyrics using supervised machine learning algorithms',
-      venue: '2022 2nd Asian Conference on Innovation in Technology (ASIANCON), pp. 1-6',
+      venue: '2022 2nd Asian Conference on Innovation in Technology (ASIANCON)',
       year: '2022',
       authors: 'N Sumith, S Wagle, P Ghosh, K Kishore',
-      link: 'https://ieeexplore.ieee.org/document/10015766',
+      link: 'https://ieeexplore.ieee.org/abstract/document/9908688',
+      abstract: 'Finding music based on mood is challenging for multilingual content. We employ textual sentiment analysis testing various binary classifier algorithms including Random Forest, Naive Bayes, SVM, and AdaBoost to classify English and Hindi music lyrics into positive and negative sentiments.',
     },
     {
       title: 'Adversarial jamming and catching games over AWGN channels with mobile players',
       venue: '2021 17th International Conference on Wireless and Mobile Computing',
       year: '2021',
       authors: 'G Perin, A Buratto, NM Anselmi, S Wagle, L Badia',
-      link: 'https://ieeexplore.ieee.org/document/9700551',
+      link: 'https://ieeexplore.ieee.org/abstract/document/9606382',
+      abstract: 'We consider a wireless jamming game between a receiver and a malicious interferer. Players can leverage distance-dependent path loss by changing physical location. We analyze both static and dynamic scenarios, characterizing the Price of Mobility and showing that mobile players can significantly improve their outcomes.',
     },
   ];
 
@@ -688,7 +693,10 @@ const Portfolio = () => {
                   <span style={{ fontSize: '0.78rem', fontWeight: 600, color: '#aaa', whiteSpace: 'nowrap' }}>{pub.year}</span>
                 </div>
                 <div style={{ fontSize: '0.875rem', color: colors.gray, marginBottom: '10px' }}>{pub.venue}</div>
-                <p style={{ fontSize: '0.82rem', color: colors.gray, marginBottom: '8px' }}>{pub.authors}</p>
+                <p style={{ fontSize: '0.82rem', color: colors.gray, marginBottom: '12px' }}>{pub.authors}</p>
+                {pub.abstract && (
+                  <p style={{ fontSize: '0.82rem', color: colors.gray, marginBottom: '0px', lineHeight: '1.5' }}>{pub.abstract}</p>
+                )}
               </div>
             </div>
           ))}
