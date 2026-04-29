@@ -485,11 +485,11 @@ const Portfolio = () => {
       {/* Hero Section */}
       <section id="hero" style={{ ...styles.section, ...styles.hero, background: `linear-gradient(135deg, ${colors.lightBg} 0%, #ffffff 100%)` }}>
         <div style={styles.container}>
-          <p style={styles.heroEyebrow}>Data Scientist & ML Engineer</p>
+          <p style={styles.heroEyebrow}>Software Developer & AI Engineer</p>
           <h1 style={styles.h1}>Hi, I'm Shruti Wagle 👋</h1>
           <p style={styles.tagline}>
-            I turn raw data into actionable insights — building machine learning models,
-            designing data pipelines, and crafting stories with data.
+            I build intelligent systems and full-stack applications powered by AI —
+            designing scalable architectures and crafting seamless user experiences.
           </p>
           <div style={styles.buttonGroup}>
             <button
@@ -533,13 +533,13 @@ const Portfolio = () => {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'start' }}>
             <div>
               <p style={{ marginBottom: '16px' }}>
-                I'm a Data Scientist and Machine Learning Engineer with a passion for solving real-world problems through data. I enjoy the full journey — from exploratory analysis and feature engineering to model training, evaluation, and deployment.
+                I'm a Software Developer and AI Engineer with a passion for building intelligent applications that solve real-world problems. I enjoy the full journey — from architecture and design to development, deployment, and optimization of production systems.
               </p>
               <p style={{ marginBottom: '16px' }}>
-                I thrive at the intersection of research and engineering, building systems that are not just accurate but reliable and scalable. I'm always learning, whether it's the latest advances in deep learning or better ways to communicate insights to non-technical stakeholders.
+                I thrive at the intersection of software engineering and AI, creating systems that are not just powerful but scalable, maintainable, and user-centric. I'm always learning, whether it's cutting-edge AI techniques or best practices in full-stack development.
               </p>
               <p>
-                Outside of work, you'll find me reading ML papers, contributing to open-source projects, or experimenting with side projects that scratch my curiosity.
+                Outside of work, you'll find me exploring AI advancements, contributing to open-source projects, or building side projects that push my technical boundaries.
               </p>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
