@@ -384,6 +384,51 @@ const Portfolio = () => {
     },
   ];
 
+  const volunteering = [
+    {
+      title: 'Member',
+      organization: 'The AI Collective',
+      category: 'Science and Technology',
+      period: 'April 2025 – Present',
+      details: ['Contributing to AI research and development initiatives.'],
+    },
+    {
+      title: 'NLP Volunteer',
+      organization: 'CoronaWhy',
+      category: 'Health',
+      period: 'July 2020 – September 2020',
+      details: [
+        'NLP volunteer for the literature review interface team.',
+        'Published a dataset chronicling articles on the Spanish flu pandemic.',
+        'Compiled a list of OCRIDs of authors with publications on coronaviruses.',
+      ],
+    },
+    {
+      title: 'Head of External Relations',
+      organization: 'UNICEF - World\'s Largest Lesson',
+      category: 'Education',
+      period: 'April 2019 – August 2019',
+      details: [
+        'Contacted schools and pitched the event to them.',
+        'Coordinated with schools regarding timings, student count, logistics, and lesson plans.',
+        'Recruited volunteers and conducted training seminars.',
+        'Met with college heads to coordinate volunteer schedules.',
+        'Managed the organizing committee and troubleshot issues on the day of the event.',
+      ],
+    },
+    {
+      title: 'Marketing and Networking Volunteer',
+      organization: 'N.G.O. Child\'s Heart',
+      category: 'Health',
+      period: 'May 2019 – June 2019',
+      details: [
+        'Created marketing and digital content for an NGO for children afflicted with CHD.',
+        'International volunteering program in Athens, Greece.',
+        'Contributed to the United Nations\' Sustainable Development Goal 17.',
+      ],
+    },
+  ];
+
   const education = [
     {
       degree: 'M.S. Computer Engineering',
@@ -532,7 +577,7 @@ const Portfolio = () => {
             Shruti Wagle
           </span>
           <ul style={styles.navLinks}>
-            {['about', 'experience', 'education', 'publications', 'projects', 'contact'].map((item) => (
+            {['about', 'experience', 'education', 'volunteering', 'publications', 'projects', 'contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
@@ -731,8 +776,37 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* Volunteering Section */}
+      <section id="volunteering" style={{ ...styles.section, background: '#ffffff' }}>
+        <div style={styles.container}>
+          <p style={styles.sectionLabel}>Volunteering</p>
+          <h2 style={styles.sectionTitle}>Where I've contributed</h2>
+          <div style={styles.divider}></div>
+          {volunteering.map((vol, i) => (
+            <div key={i} style={styles.timelineCard}>
+              <div style={{ fontSize: '1.3rem' }}>🤝</div>
+              <div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '4px', marginBottom: '4px' }}>
+                  <span style={{ fontSize: '1rem', fontWeight: 700, color: colors.darkText }}>{vol.title}</span>
+                  <span style={{ fontSize: '0.78rem', fontWeight: 600, color: '#aaa', whiteSpace: 'nowrap' }}>{vol.period}</span>
+                </div>
+                <div style={{ fontSize: '0.875rem', color: colors.gray, marginBottom: '10px' }}>{vol.organization} · {vol.category}</div>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  {vol.details.map((detail, j) => (
+                    <li key={j} style={{ fontSize: '0.875rem', color: colors.gray, paddingLeft: '14px', position: 'relative' }}>
+                      <span style={{ position: 'absolute', left: 0, color: '#bbb' }}>–</span>
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Publications Section */}
-      <section id="publications" style={{ ...styles.section, background: '#ffffff' }}>
+      <section id="publications" style={{ ...styles.section, background: colors.lightBg, borderTop: `1px solid ${colors.lightGray}` }}>
         <div style={styles.container}>
           <p style={styles.sectionLabel}>Publications</p>
           <h2 style={styles.sectionTitle}>Research & Papers</h2>
