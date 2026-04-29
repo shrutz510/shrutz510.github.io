@@ -323,7 +323,63 @@ const Portfolio = () => {
       location: 'New York, NY',
       period: 'June 2023 – Aug 2023',
       details: [
+        'Member of the business analytics team using SQL Server, MS Access, and MS SSIS to navigate sales data, build market research code, troubleshoot analytical errors, and create informative reports.',
         'Optimized data entry and validation procedures to reduce errors by 60% and decrease program run-time by 20%.',
+      ],
+    },
+    {
+      title: 'Software Developer',
+      company: 'UBS',
+      location: 'Pune, Maharashtra, India',
+      period: 'January 2022 – June 2022',
+      details: [
+        'Member of the sensitive data detection team developing the Request History Application for sensitive data scanning and delivery.',
+        'Debugged issues and maintained the application across UBS worldwide, improving application stability and uptime by 20% over 6 months.',
+        'Developed using React, TypeScript, MaterialUI, node.js, express.js, and Jira.',
+      ],
+    },
+    {
+      title: 'Undergraduate Research Assistant',
+      company: 'Manipal Institute of Technology',
+      location: 'Manipal, India',
+      period: 'March 2021 – June 2022',
+      details: [
+        'Spearheaded a natural language processing research project on Sentiment Classification of English and Hindi Music Lyrics Using Supervised Machine Learning Algorithms.',
+        'Leveraged supervised machine learning classification models in Python and achieved 74.8% accuracy for Hindi and 67.15% for English music.',
+        'Presented and published at ASIANCON 2022.',
+      ],
+    },
+    {
+      title: 'Undergraduate Research Assistant',
+      company: 'Manipal Institute of Technology',
+      location: 'Manipal, India',
+      period: 'January 2021 – April 2022',
+      details: [
+        'Worked with the Department of Computer Application on Disguise Face Recognition Using EfficientNet Deep Learning.',
+        'Developed an EfficientNet model that achieved a 93.9% accuracy rate in detecting and classifying disguised faces, outperforming competing models by 5%.',
+        'Presented in the main session of ICHCSC 2022 and won the best paper award.',
+      ],
+    },
+    {
+      title: 'Research Intern',
+      company: 'Università degli Studi di Padova',
+      location: 'Padua, Veneto, Italy',
+      period: 'October 2020 – October 2021',
+      details: [
+        'Audited a course on game theory.',
+        'Worked on a paper titled Adversarial Jamming and Catching Games over AWGN Channels with Mobile Players, conducting wireless jamming game experiments by analyzing the wireless medium and interference characteristics.',
+        'Presented and published the paper in the main session of WiMob 2021.',
+      ],
+    },
+    {
+      title: 'Software Developer',
+      company: 'UBS',
+      location: 'Pune, Maharashtra, India',
+      period: 'June 2021 – August 2021',
+      details: [
+        'Member of the core automation team working on full stack development of the device management and exchange platform.',
+        'Engineered and implemented the platform, optimizing device usage efficiency by 45% and reducing device downtime by 75%.',
+        'Developed using React, node.js, and MySQL. Platform was expanded to other UBS divisions worldwide.',
       ],
     },
   ];
