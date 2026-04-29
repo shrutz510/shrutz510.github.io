@@ -577,7 +577,7 @@ const Portfolio = () => {
             Shruti Wagle
           </span>
           <ul style={styles.navLinks}>
-            {['about', 'experience', 'education', 'volunteering', 'publications', 'projects'].map((item) => (
+            {['about', 'experience', 'education', 'publications', 'projects', 'volunteering'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
@@ -777,34 +777,6 @@ const Portfolio = () => {
       </section>
 
       {/* Volunteering Section */}
-      <section id="volunteering" style={{ ...styles.section, background: '#ffffff' }}>
-        <div style={styles.container}>
-          <p style={styles.sectionLabel}>Volunteering</p>
-          <h2 style={styles.sectionTitle}>Where I've contributed</h2>
-          <div style={styles.divider}></div>
-          {volunteering.map((vol, i) => (
-            <div key={i} style={styles.timelineCard}>
-              <div style={{ fontSize: '1.3rem' }}>🤝</div>
-              <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '4px', marginBottom: '4px' }}>
-                  <span style={{ fontSize: '1rem', fontWeight: 700, color: colors.darkText }}>{vol.title}</span>
-                  <span style={{ fontSize: '0.78rem', fontWeight: 600, color: '#aaa', whiteSpace: 'nowrap' }}>{vol.period}</span>
-                </div>
-                <div style={{ fontSize: '0.875rem', color: colors.gray, marginBottom: '10px' }}>{vol.organization} · {vol.category}</div>
-                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                  {vol.details.map((detail, j) => (
-                    <li key={j} style={{ fontSize: '0.875rem', color: colors.gray, paddingLeft: '14px', position: 'relative' }}>
-                      <span style={{ position: 'absolute', left: 0, color: '#bbb' }}>–</span>
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Publications Section */}
       <section id="publications" style={{ ...styles.section, background: colors.lightBg, borderTop: `1px solid ${colors.lightGray}` }}>
         <div style={styles.container}>
@@ -871,6 +843,34 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* Volunteering Section */}
+      <section id="volunteering" style={{ ...styles.section, background: '#ffffff' }}>
+        <div style={styles.container}>
+          <p style={styles.sectionLabel}>Volunteering</p>
+          <h2 style={styles.sectionTitle}>Where I've contributed</h2>
+          <div style={styles.divider}></div>
+          {volunteering.map((vol, i) => (
+            <div key={i} style={styles.timelineCard}>
+              <div style={{ fontSize: '1.3rem' }}>🤝</div>
+              <div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '4px', marginBottom: '4px' }}>
+                  <span style={{ fontSize: '1rem', fontWeight: 700, color: colors.darkText }}>{vol.title}</span>
+                  <span style={{ fontSize: '0.78rem', fontWeight: 600, color: '#aaa', whiteSpace: 'nowrap' }}>{vol.period}</span>
+                </div>
+                <div style={{ fontSize: '0.875rem', color: colors.gray, marginBottom: '10px' }}>{vol.organization} · {vol.category}</div>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  {vol.details.map((detail, j) => (
+                    <li key={j} style={{ fontSize: '0.875rem', color: colors.gray, paddingLeft: '14px', position: 'relative' }}>
+                      <span style={{ position: 'absolute', left: 0, color: '#bbb' }}>–</span>
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Footer */}
       <footer style={{ padding: '32px 0', borderTop: `1px solid ${colors.lightGray}`, textAlign: 'center', fontSize: '0.82rem', color: '#aaa' }}>
