@@ -9,11 +9,11 @@ const Portfolio = () => {
     primary: '#0d9488',        // Teal
     primaryLight: '#14b8a6',   // Light Teal
     cyan: '#06b6d4',           // Cyan
-    dark: '#4a5566',           // Dark Gray
-    darkText: '#5a6b7f',       // Dark Gray Text
+    dark: '#3d4856',           // Dark Gray
+    darkText: '#495564',       // Dark Gray Text
     lightBg: '#f0fdfa',        // Very Light Teal
     white: '#ffffff',
-    gray: '#6b7d8f',           // Medium Gray
+    gray: '#5a6b7f',           // Medium Gray
     lightGray: '#e2e8f0',      // Light Slate
   };
 
