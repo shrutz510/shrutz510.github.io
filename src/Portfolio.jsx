@@ -493,6 +493,12 @@ const Portfolio = () => {
 
   const projects = [
     {
+      title: 'SEC Filing RAG',
+      description: 'Retrieval-Augmented Generation (RAG) system for querying SEC filings using natural language. Combines semantic search over financial documents with LLM-based reasoning to deliver accurate, citation-backed answers from 10-K, 10-Q, and 8-K reports.',
+      tags: ['RAG', 'LLMs', 'Vector Search', 'NLP', 'Finance'],
+      link: 'https://shrutz510.github.io/SEC-Filing-Rag/',
+    },
+    {
       title: 'WavePulse: Real-time Content Analytics of Radio Livestreams',
       description: 'Full-stack platform processing 480,000 hours from 396 radio stations with real-time transcription (WhisperX: 8.4% WER) and LLM-based analysis. Achieved 99.7% availability over 4.5B words.',
       tags: ['React', 'Django', 'PostgreSQL', 'WhisperX', 'LLMs', 'GPU'],
