@@ -502,7 +502,7 @@ const Portfolio = () => {
       title: 'WavePulse: Real-time Content Analytics of Radio Livestreams',
       description: 'Full-stack platform processing 480,000 hours from 396 radio stations with real-time transcription (WhisperX: 8.4% WER) and LLM-based analysis. Achieved 99.7% availability over 4.5B words.',
       tags: ['React', 'Django', 'PostgreSQL', 'WhisperX', 'LLMs', 'GPU'],
-      link: 'https://github.com/shrutz510/WavePulse',
+      link: 'https://wave-pulse.io/',
     },
     {
       title: 'Image Generation Analysis for Imbalanced Datasets',
