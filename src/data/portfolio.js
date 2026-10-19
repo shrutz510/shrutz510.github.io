@@ -221,7 +221,7 @@ export const publications = [
     venue: 'Human-Centric Smart Computing: Proceedings of ICHCSC 2022',
     logo: '/logos/springer.png',
     year: '2022',
-    authors: 'G Padmashree, SG Wagle, AK Karunakar',
+    authors: 'G Padmashree, S Wagle, AK Karunakar',
     link: 'https://link.springer.com/chapter/10.1007/978-981-19-5403-0_26',
     abstract: 'With the rise in popularity of social media and intelligent gadgets, face recognition systems must be more accurate. This research proposes the EfficientNet family of models for disguise face classification. EfficientNet-B3 achieved 93.9% accuracy in detecting and classifying disguised faces, outperforming competing models.',
   },
