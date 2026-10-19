@@ -243,6 +243,12 @@ export const publications = [
 
 export const projects = [
   {
+    title: 'Computer-Use Automation System',
+    description: 'An LLM agent discovers how to complete tasks in a legacy back-office web app, then records each successful run as a typed, versioned capability that replays deterministically with no model in the loop. Includes fault recovery, policy-enforced safety allowlists, and human approval for irreversible actions.',
+    tags: ['Python', 'Playwright', 'Gemini', 'LLM Agents', 'Computer Use'],
+    link: 'https://github.com/shrutz510/computer-use-automation',
+  },
+  {
     title: 'SEC Filing RAG',
     description: 'Retrieval-Augmented Generation (RAG) system for querying SEC filings using natural language. Combines semantic search over financial documents with LLM-based reasoning to deliver accurate, citation-backed answers from 10-K, 10-Q, and 8-K reports.',
     tags: ['RAG', 'LLMs', 'Vector Search', 'NLP', 'Finance'],
