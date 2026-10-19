@@ -195,6 +195,7 @@ export const publications = [
   {
     title: 'HyperHealth: a pilot study on AI-driven COVID-19 detection using hyperspectral fingertip images',
     venue: 'Scientific Reports, vol. 16',
+    logo: '/logos/nature.png',
     year: '2026',
     authors: 'E Marasco, S Wagle, M Rule, K Lee-Wisdom, MH Khan, J Deeken, R Ramachandra, et al.',
     link: 'https://www.nature.com/articles/s41598-026-47056-x',
@@ -203,6 +204,7 @@ export const publications = [
   {
     title: 'WavePulse: Real-time Content Analytics of Radio Livestreams',
     venue: 'Proceedings of the ACM on Web Conference 2025',
+    logo: '/logos/acm.png',
     year: '2025',
     authors: 'G Mittal, S Gupta, S Wagle, C Chopra, AJ DeMattee, N Memon, et al.',
     link: 'https://dl.acm.org/doi/abs/10.1145/3696410.3714810',
@@ -211,6 +213,7 @@ export const publications = [
   {
     title: 'Mitigating the impact of attribute editing on face recognition',
     venue: '2024 IEEE International Joint Conference on Biometrics (IJCB)',
+    logo: '/logos/ieee.png',
     year: '2024',
     authors: 'S Banerjee, SP Mullangi, S Wagle, C Hegde, N Memon',
     link: 'https://ieeexplore.ieee.org/abstract/document/10744430',
@@ -219,6 +222,7 @@ export const publications = [
   {
     title: 'Disguise face classification using efficientnet deep learning',
     venue: 'Human-Centric Smart Computing: Proceedings of ICHCSC 2022',
+    logo: '/logos/springer.png',
     year: '2022',
     authors: 'G Padmashree, SG Wagle, AK Karunakar',
     link: 'https://link.springer.com/chapter/10.1007/978-981-19-5403-0_26',
@@ -227,6 +231,7 @@ export const publications = [
   {
     title: 'Sentiment classification of English and Hindi music lyrics using supervised machine learning algorithms',
     venue: '2022 2nd Asian Conference on Innovation in Technology (ASIANCON)',
+    logo: '/logos/ieee.png',
     year: '2022',
     authors: 'N Sumith, S Wagle, P Ghosh, K Kishore',
     link: 'https://ieeexplore.ieee.org/abstract/document/9908688',
@@ -235,6 +240,7 @@ export const publications = [
   {
     title: 'Adversarial jamming and catching games over AWGN channels with mobile players',
     venue: '2021 17th International Conference on Wireless and Mobile Computing',
+    logo: '/logos/ieee.png',
     year: '2021',
     authors: 'G Perin, A Buratto, NM Anselmi, S Wagle, L Badia',
     link: 'https://ieeexplore.ieee.org/abstract/document/9606382',

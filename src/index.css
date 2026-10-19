@@ -100,7 +100,7 @@ ul {
 
 /* ── Sections ── */
 .section {
-  padding: 80px 0;
+  padding: 64px 0;
   scroll-margin-top: 60px;
 }
 
@@ -131,7 +131,7 @@ ul {
   height: 3px;
   background: var(--primary);
   border-radius: 2px;
-  margin: 16px 0 44px;
+  margin: 14px 0 32px;
 }
 
 /* ── Navbar ── */
@@ -217,10 +217,7 @@ ul {
 
 /* ── Hero ── */
 .hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding-top: 60px;
+  padding: 150px 0 96px;
   background: linear-gradient(135deg, var(--tint) 0%, var(--bg) 100%);
 }
 
@@ -372,7 +369,10 @@ ul {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 14px;
-  margin-bottom: 20px;
+}
+
+.timeline-card:not(:last-child) {
+  margin-bottom: 14px;
 }
 
 .timeline-card {
@@ -380,7 +380,7 @@ ul {
   grid-template-columns: 52px 1fr;
   gap: 18px;
   align-items: start;
-  padding: 24px 26px;
+  padding: 20px 24px;
 }
 
 /* Logos are designed for light backgrounds, so their tile stays white in dark mode. */
@@ -472,24 +472,34 @@ a.card-title:hover {
 }
 
 /* ── Projects ── */
-.project-card {
+.projects-grid {
   display: grid;
-  grid-template-columns: 200px 1fr auto;
-  gap: 22px;
-  align-items: start;
-  padding: 22px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+}
+
+.project-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--hover-shadow);
+  transform: translateY(-2px);
 }
 
 .project-thumb {
-  display: block;
-  aspect-ratio: 16 / 10;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border-bottom: 1px solid var(--border);
   background: var(--tint);
+  overflow: hidden;
 }
 
 .project-thumb img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -501,33 +511,73 @@ a.card-title:hover {
   transform: scale(1.03);
 }
 
-.project-card h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+.project-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 16px 18px 18px;
 }
 
+.project-card h3 {
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.project-arrow {
+  color: var(--primary);
+  font-size: 0.85em;
+}
+
+/* Keep cards even; the full write-up is one click away. */
 .project-card p {
-  font-size: 0.9rem;
+  font-size: 0.84rem;
+  line-height: 1.55;
   color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .project-card .tags {
-  margin-top: 14px;
+  margin-top: auto;
+  padding-top: 12px;
 }
 
-.project-link {
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 6px 14px;
+/* ── Show more & abstracts ── */
+.show-more {
+  display: block;
+  margin: 18px auto 0;
+  padding: 8px 18px;
   border: 1.5px solid var(--border);
-  border-radius: 7px;
-  white-space: nowrap;
-  transition: border-color 0.2s;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  transition: border-color 0.2s, color 0.2s;
 }
 
-.project-link:hover {
+.show-more:hover {
   border-color: var(--primary);
+  color: var(--heading);
+}
+
+.abstract {
+  margin-top: 8px;
+}
+
+.abstract summary {
+  width: fit-content;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.abstract[open] summary {
+  margin-bottom: 6px;
 }
 
 /* ── Footer & scroll-to-top ── */
@@ -619,12 +669,15 @@ a.card-title:hover {
     padding: 3px;
   }
 
-  .project-card {
+  .projects-grid {
     grid-template-columns: 1fr;
-    padding: 18px;
   }
 
-  .project-link {
-    justify-self: start;
+  .hero {
+    padding: 120px 0 72px;
+  }
+
+  .section {
+    padding: 52px 0;
   }
 }
