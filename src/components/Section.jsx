@@ -1,5 +1,5 @@
-const Section = ({ id, label, title, children }) => (
-  <section id={id} className="section">
+const Section = ({ id, label, title, wide, children }) => (
+  <section id={id} className={`section${wide ? ' section--wide' : ''}`}>
     <div className="container">
       <a className="back-link" href="#/">
         ← Home

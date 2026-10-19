@@ -103,6 +103,10 @@ ul {
   padding: 100px 0 72px;
 }
 
+.section--wide .container {
+  max-width: 1040px;
+}
+
 .back-link {
   display: inline-block;
   margin-bottom: 20px;
@@ -330,7 +334,7 @@ ul {
 /* ── Skills ── */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -629,6 +633,10 @@ a.card-title:hover {
     display: flex;
   }
 
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .section-cards {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -641,6 +649,10 @@ a.card-title:hover {
 }
 
 @media (max-width: 640px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 32px;

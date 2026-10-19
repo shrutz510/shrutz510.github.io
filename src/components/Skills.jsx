@@ -3,7 +3,7 @@ import Tags from './Tags';
 import { skills } from '../data/portfolio';
 
 const Skills = () => (
-  <Section id="skills" label="Skills" title="What I work with">
+  <Section id="skills" label="Skills" title="What I work with" wide>
     <div className="skills-grid">
       {skills.map((skill) => (
         <div key={skill.title} className="skill-card">
