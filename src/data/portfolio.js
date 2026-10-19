@@ -341,15 +341,15 @@ export const skills = [
     tags: ['WhisperX', 'Speech-to-text', 'Diarization', 'Sentiment analysis', 'NLTK', 'spaCy'],
   },
   {
-    icon: '🗄️',
-    title: 'Data Engineering',
-    description: 'Storing, moving, and processing large datasets.',
-    tags: ['SQL', 'PostgreSQL', 'PySpark', 'Azure Data Lake', 'SQL Server', 'SSIS'],
-  },
-  {
     icon: '⚙️',
     title: 'Software & Infrastructure',
-    description: 'Full-stack apps, automation, and cloud deployment.',
-    tags: ['Python', 'TypeScript', 'JavaScript', 'C++', 'React', 'Django', 'Node.js', 'Playwright', 'AWS', 'Git', 'GitHub Actions'],
+    description: 'Full-stack apps, data pipelines, and cloud deployment.',
+    tags: ['Python', 'SQL', 'TypeScript', 'C++', 'React', 'Django', 'PostgreSQL', 'PySpark', 'Playwright', 'AWS', 'Git', 'GitHub Actions'],
+  },
+  {
+    icon: '🧭',
+    title: 'Leadership & Collaboration',
+    description: 'Owning outcomes, leading teams, and communicating research clearly.',
+    tags: ['Ownership', 'Team leadership', 'Mentoring & teaching', 'Cross-functional collaboration', 'Technical writing', 'Public speaking', 'Stakeholder communication'],
   },
 ];
