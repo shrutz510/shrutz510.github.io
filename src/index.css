@@ -223,7 +223,7 @@ ul {
 
 /* ── Home ── */
 .home {
-  padding: 96px 0 40px;
+  padding: 88px 0 40px;
   min-height: 100vh;
   background: linear-gradient(135deg, var(--tint) 0%, var(--bg) 100%);
 }
@@ -232,63 +232,27 @@ ul {
   max-width: 1040px;
 }
 
-.hero-eyebrow {
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--primary);
-  margin-bottom: 12px;
-}
-
 .hero-title {
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
-.hero-tagline {
-  font-size: 1.1rem;
-  color: var(--muted);
-  max-width: 600px;
-  margin-bottom: 24px;
-}
 
-.button-group {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 10px 22px;
-  border: 1.5px solid var(--border);
-  border-radius: 8px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  transition: border-color 0.2s;
-}
-
-.button:hover {
-  border-color: var(--primary);
-}
 
 .section-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
   margin-top: 32px;
 }
 
 .section-card {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 16px 18px;
+  gap: 2px;
+  padding: 14px 16px;
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
@@ -298,11 +262,10 @@ ul {
   transform: translateY(-2px);
 }
 
-.section-card-icon {
-  font-size: 1.4rem;
-}
-
 .section-card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 1rem;
   font-weight: 700;
   color: var(--heading);
@@ -672,6 +635,10 @@ a.card-title:hover {
     display: flex;
   }
 
+  .section-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .navbar-link {
     display: block;
     padding: 10px 0;
@@ -721,21 +688,12 @@ a.card-title:hover {
   }
 
   .section-card {
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
     padding: 14px;
-  }
-
-  .section-card-icon {
-    font-size: 1.1rem;
   }
 
   .section-card-title {
     font-size: 0.92rem;
   }
 
-  .section-card-summary {
-    display: none;
-  }
+
 }

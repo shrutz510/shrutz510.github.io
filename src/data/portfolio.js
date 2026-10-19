@@ -1,8 +1,5 @@
 export const profile = {
   name: 'Shruti Wagle',
-  role: 'Machine Learning Engineer',
-  tagline:
-    'I build LLM agents and full-stack AI systems, and publish research in biometrics and computer vision — taking ideas from paper to production.',
   github: 'https://github.com/shrutz510',
   linkedin: 'https://www.linkedin.com/in/shruti-wagle',
 };
