@@ -16,7 +16,6 @@ const Home = () => (
               {section.label}
               <span className="section-card-arrow">→</span>
             </span>
-            <span className="section-card-summary">{section.summary}</span>
           </a>
         ))}
       </div>

@@ -281,12 +281,6 @@ ul {
   transform: translateX(3px);
 }
 
-.section-card-summary {
-  font-size: 0.84rem;
-  line-height: 1.5;
-  color: var(--muted);
-}
-
 /* ── About ── */
 .about-grid {
   display: grid;
