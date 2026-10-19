@@ -300,9 +300,9 @@ export const projects = [
 export const skills = [
   {
     icon: '🤖',
-    title: 'LLMs & Agents',
-    description: 'Multi-step agentic pipelines, tool calling, and RAG for production APIs.',
-    tags: ['RAG', 'Agentic pipelines', 'Tool calling', 'Context engineering', 'Knowledge graphs', 'Computer-use agents', 'Gemini', 'Llama', 'Mistral'],
+    title: 'LLMs, RAG & Agents',
+    description: 'Agentic pipelines, retrieval, and tool calling for production APIs.',
+    tags: ['RAG', 'Agentic pipelines', 'Tool calling', 'Context engineering', 'Knowledge graphs', 'Computer-use agents', 'FAISS', 'BGE-M3', 'Gemini', 'Llama'],
   },
   {
     icon: '📏',
@@ -311,34 +311,16 @@ export const skills = [
     tags: ['LLM-as-judge', 'Regression testing', 'Failure attribution', 'Benchmarking', 'Instrumentation'],
   },
   {
-    icon: '🔎',
-    title: 'Retrieval & Search',
-    description: 'Embedding-based search and retrieval over billions of words.',
-    tags: ['FAISS', 'BGE-M3', 'Vector search', 'Semantic search', 'Embeddings'],
-  },
-  {
     icon: '🧠',
-    title: 'Deep Learning & Training',
-    description: 'Training, fine-tuning, and scaling neural networks on GPUs.',
-    tags: ['PyTorch', 'TensorFlow', 'Transformers', 'Distributed Data Parallel', 'Multi-GPU training', 'LoRA', 'DreamBooth'],
-  },
-  {
-    icon: '👁️',
-    title: 'Computer Vision & Generative AI',
-    description: 'Diffusion models, biometrics, and vision-language models.',
-    tags: ['Stable Diffusion', 'ControlNet', 'GANs', 'LLaVA', 'ArcFace', 'AdaFace', 'Hyperspectral imaging'],
+    title: 'Deep Learning & Computer Vision',
+    description: 'Training, fine-tuning, and generative models on GPUs.',
+    tags: ['PyTorch', 'TensorFlow', 'Transformers', 'Distributed training', 'LoRA', 'Stable Diffusion', 'ControlNet', 'DreamBooth', 'GANs', 'LLaVA'],
   },
   {
     icon: '📊',
-    title: 'Classical ML & Data Science',
-    description: 'Modeling, feature engineering, and rigorous evaluation on tabular and spectral data.',
-    tags: ['scikit-learn', 'XGBoost', 'SVM', 'Logistic Regression', 'Random Forest', 'Feature engineering', 'Time series', 'Class imbalance'],
-  },
-  {
-    icon: '🎙️',
-    title: 'Speech & NLP',
-    description: 'Transcription, diarization, and text analytics at scale.',
-    tags: ['WhisperX', 'Speech-to-text', 'Diarization', 'Sentiment analysis', 'NLTK', 'spaCy'],
+    title: 'ML, NLP & Speech',
+    description: 'Classical modeling, text analytics, and transcription at scale.',
+    tags: ['scikit-learn', 'XGBoost', 'SVM', 'Feature engineering', 'Time series', 'Class imbalance', 'WhisperX', 'Diarization', 'spaCy'],
   },
   {
     icon: '⚙️',
