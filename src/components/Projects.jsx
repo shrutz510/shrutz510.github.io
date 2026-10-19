@@ -1,12 +1,11 @@
 import Section from './Section';
-import ShowMore from './ShowMore';
 import Tags from './Tags';
 import { projects } from '../data/portfolio';
 
 const Projects = () => (
   <Section id="projects" label="Projects" title="Things I've built">
-    <ShowMore items={projects} limit={4} noun="projects" className="projects-grid">
-      {(project) => (
+    <div className="projects-grid">
+      {projects.map((project) => (
         <a
           key={project.title}
           className="card project-card"
@@ -25,8 +24,8 @@ const Projects = () => (
             <Tags items={project.tags} />
           </div>
         </a>
-      )}
-    </ShowMore>
+      ))}
+    </div>
   </Section>
 );
 

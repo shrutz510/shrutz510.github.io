@@ -4,7 +4,7 @@ import Tags from './Tags';
 import { education } from '../data/portfolio';
 
 const Education = () => (
-  <Section id="education" label="Education" title="Where I studied" tinted>
+  <Section id="education" label="Education" title="Where I studied">
     {education.map((edu) => (
       <TimelineCard
         key={edu.degree}

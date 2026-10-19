@@ -9,23 +9,24 @@ const facts = [
 ];
 
 const About = () => (
-  <Section id="about" label="About Me" title="From research papers to production systems" tinted>
+  <Section id="about" label="About Me" title="I build ML systems that ship">
     <div className="about-grid">
       <div className="about-text">
         <p>
-          I'm a Machine Learning Engineer at a stealth AI startup, where I work on language models. Before that, I was a
-          research associate at George Mason University and NYU, working on synthetic iris generation with Stable
-          Diffusion, anomaly detection in hyperspectral fingerprints, and how generative attribute editing breaks face
-          recognition.
+          I'm a Machine Learning Engineer at a stealth AI startup in New York, building the next generation of language
+          models.
         </p>
         <p>
-          That research has turned into papers at The Web Conference, IJCB and <em>Scientific Reports</em>. I also like
-          building the systems around models: WavePulse transcribes and analyzes live radio from nearly 400 stations,
-          and my recent projects include a RAG system over SEC filings and a computer-use agent that learns tasks in
-          legacy web apps and replays them without an LLM in the loop.
+          Before that, I took ML systems from idea to production. I built WavePulse, a platform that streamed,
+          transcribed and analyzed 480,000 hours of radio from 396 stations with 99.7% availability. At George Mason
+          University I architected a synthetic iris generation pipeline with Stable Diffusion 3.5, DreamBooth and LoRA,
+          and built a state-of-the-art anomaly detector for hyperspectral fingerprints. At UBS I shipped internal
+          platforms that cut device downtime by 75% and were rolled out across divisions worldwide.
         </p>
         <p>
-          I care about ML that holds up outside a notebook: measurable, reproducible, and safe to run in production.
+          That work has been published at The Web Conference, IJCB and Scientific Reports. Lately I've been building LLM
+          agents, including a computer-use system that learns tasks in legacy web apps and replays them safely without a
+          model in the loop.
         </p>
       </div>
       <div className="facts">

@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { profile } from '../data/portfolio';
+import sections from '../sections';
 import useTheme from '../hooks/useTheme';
 
-const LINKS = ['about', 'skills', 'experience', 'education', 'publications', 'projects', 'volunteering'];
-
-const Navbar = ({ activeSection }) => {
+const Navbar = ({ active }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const nextTheme = theme === 'dark' ? 'light' : 'dark';
 
   // Close the mobile menu on Escape.
   useEffect(() => {
@@ -19,18 +19,19 @@ const Navbar = ({ activeSection }) => {
   return (
     <nav className={`navbar${menuOpen ? ' menu-open' : ''}`}>
       <div className="container navbar-inner">
-        <button className="navbar-brand" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <a className="navbar-brand" href="#/" onClick={() => setMenuOpen(false)}>
           {profile.name}
-        </button>
+        </a>
         <ul id="nav-links" className="navbar-links">
-          {LINKS.map((id) => (
+          {sections.map(({ id, label }) => (
             <li key={id}>
               <a
-                href={`#${id}`}
-                className={`navbar-link${activeSection === id ? ' active' : ''}`}
+                href={`#/${id}`}
+                className={`navbar-link${active === id ? ' active' : ''}`}
+                aria-current={active === id ? 'page' : undefined}
                 onClick={() => setMenuOpen(false)}
               >
-                {id.charAt(0).toUpperCase() + id.slice(1)}
+                {label}
               </a>
             </li>
           ))}
@@ -39,8 +40,8 @@ const Navbar = ({ activeSection }) => {
           <button
             className="icon-button"
             onClick={toggleTheme}
-            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-            title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+            aria-label={`Switch to ${nextTheme} mode`}
+            title={`Switch to ${nextTheme} mode`}
           >
             {theme === 'dark' ? '☀' : '☾'}
           </button>

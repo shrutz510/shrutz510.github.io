@@ -3,7 +3,7 @@ import TimelineCard from './TimelineCard';
 import { publications } from '../data/portfolio';
 
 const Publications = () => (
-  <Section id="publications" label="Publications" title="Research & Papers" tinted>
+  <Section id="publications" label="Publications" title="Research & Papers">
     {publications.map((pub) => (
       <TimelineCard
         key={pub.title}

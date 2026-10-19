@@ -1,33 +1,24 @@
+import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Education from './components/Education';
-import Publications from './components/Publications';
-import Projects from './components/Projects';
-import Volunteering from './components/Volunteering';
-import useScrollSpy from './hooks/useScrollSpy';
+import Home from './components/Home';
+import sections from './sections';
+import useHashRoute from './hooks/useHashRoute';
 
 const App = () => {
-  const { activeSection, scrolled } = useScrollSpy();
+  const route = useHashRoute();
+  const current = sections.find((section) => section.id === route);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 400);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
     <>
-      <Navbar activeSection={activeSection} />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Education />
-        <Publications />
-        <Projects />
-        <Volunteering />
-      </main>
-      <footer className="footer">
-        <div className="container">© {new Date().getFullYear()} Shruti Wagle · Built with ♥ and deployed with React</div>
-      </footer>
+      <Navbar active={current?.id} />
+      <main>{current ? <current.Component /> : <Home />}</main>
       <button
         className={`scroll-top${scrolled ? ' visible' : ''}`}
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
