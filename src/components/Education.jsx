@@ -8,6 +8,7 @@ const Education = () => (
     {education.map((edu) => (
       <TimelineCard
         key={edu.degree}
+        logo={edu.logo}
         icon="🎓"
         title={edu.degree}
         date={edu.period}

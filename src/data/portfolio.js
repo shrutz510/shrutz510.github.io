@@ -1,9 +1,8 @@
 export const profile = {
   name: 'Shruti Wagle',
-  role: 'Software Developer & AI Engineer',
+  role: 'Machine Learning Engineer',
   tagline:
-    'I build intelligent systems and full-stack applications powered by AI — designing scalable architectures and crafting seamless user experiences.',
-  focus: 'Machine Learning & AI',
+    'I build LLM agents and full-stack AI systems, and publish research in biometrics and computer vision — taking ideas from paper to production.',
   github: 'https://github.com/shrutz510',
   linkedin: 'https://www.linkedin.com/in/shruti-wagle',
 };
@@ -13,7 +12,7 @@ export const experience = [
     title: 'Machine Learning Engineer',
     company: 'Stealth AI Startup',
     location: 'New York, NY',
-    period: 'July 2025 – Present',
+    period: 'Jul 2025 – Present',
     details: ['Building the new generation of language models.'],
   },
   {
@@ -21,7 +20,7 @@ export const experience = [
     company: 'George Mason University',
     logo: '/logos/gmu.png',
     location: 'Virginia, United States',
-    period: 'November 2024 – June 2025',
+    period: 'Nov 2024 – Jun 2025',
     details: [
       'Architected a pipeline for generating synthetic iris images using Stable Diffusion 3.5, DreamBooth, and LoRA fine-tuning.',
       'Created a SOTA system for anomaly detection in hyperspectral fingerprint samples.',
@@ -43,7 +42,7 @@ export const experience = [
     company: 'New York University',
     logo: '/logos/nyu.png',
     location: 'New York, NY',
-    period: 'Sept 2023 – May 2024',
+    period: 'Sep 2023 – May 2024',
     details: [
       'Assisted faculty in delivering advanced deep learning and machine learning courses.',
       'Guided students through complex concepts with hands-on projects.',
@@ -54,7 +53,7 @@ export const experience = [
     company: 'Standard Motor Products',
     logo: '/logos/smp.png',
     location: 'New York, NY',
-    period: 'June 2023 – Aug 2023',
+    period: 'Jun 2023 – Aug 2023',
     details: [
       'Member of the business analytics team using SQL Server, MS Access, and MS SSIS to navigate sales data, build market research code, troubleshoot analytical errors, and create informative reports.',
       'Optimized data entry and validation procedures to reduce errors by 60% and decrease program run-time by 20%.',
@@ -65,7 +64,7 @@ export const experience = [
     company: 'UBS',
     logo: '/logos/ubs.png',
     location: 'Pune, Maharashtra, India',
-    period: 'January 2022 – June 2022',
+    period: 'Jan 2022 – Jun 2022',
     details: [
       'Member of the sensitive data detection team developing the Request History Application for sensitive data scanning and delivery.',
       'Debugged issues and maintained the application across UBS worldwide, improving application stability and uptime by 20% over 6 months.',
@@ -77,7 +76,7 @@ export const experience = [
     company: 'Manipal Institute of Technology',
     logo: '/logos/manipal.png',
     location: 'Manipal, India',
-    period: 'March 2021 – June 2022',
+    period: 'Mar 2021 – Jun 2022',
     details: [
       'Spearheaded a natural language processing research project on Sentiment Classification of English and Hindi Music Lyrics Using Supervised Machine Learning Algorithms.',
       'Leveraged supervised machine learning classification models in Python and achieved 74.8% accuracy for Hindi and 67.15% for English music.',
@@ -89,7 +88,7 @@ export const experience = [
     company: 'Manipal Institute of Technology',
     logo: '/logos/manipal.png',
     location: 'Manipal, India',
-    period: 'January 2021 – April 2022',
+    period: 'Jan 2021 – Apr 2022',
     details: [
       'Worked with the Department of Computer Application on Disguise Face Recognition Using EfficientNet Deep Learning.',
       'Developed an EfficientNet model that achieved a 93.9% accuracy rate in detecting and classifying disguised faces, outperforming competing models by 5%.',
@@ -101,7 +100,7 @@ export const experience = [
     company: 'Università degli Studi di Padova',
     logo: '/logos/unipd.png',
     location: 'Padua, Veneto, Italy',
-    period: 'October 2020 – October 2021',
+    period: 'Oct 2020 – Oct 2021',
     details: [
       'Audited a course on game theory.',
       'Worked on a paper titled Adversarial Jamming and Catching Games over AWGN Channels with Mobile Players, conducting wireless jamming game experiments by analyzing the wireless medium and interference characteristics.',
@@ -113,7 +112,7 @@ export const experience = [
     company: 'UBS',
     logo: '/logos/ubs.png',
     location: 'Pune, Maharashtra, India',
-    period: 'June 2021 – August 2021',
+    period: 'Jun 2021 – Aug 2021',
     details: [
       'Member of the core automation team working on full stack development of the device management and exchange platform.',
       'Engineered and implemented the platform, optimizing device usage efficiency by 45% and reducing device downtime by 75%.',
@@ -128,7 +127,7 @@ export const volunteering = [
     organization: 'The AI Collective',
     logo: '/logos/aicollective.png',
     category: 'Science and Technology',
-    period: 'April 2025 – Present',
+    period: 'Apr 2025 – Present',
     details: ['Contributing to AI research and development initiatives.'],
   },
   {
@@ -136,7 +135,7 @@ export const volunteering = [
     organization: 'CoronaWhy',
     logo: '/logos/coronawhy.png',
     category: 'Health',
-    period: 'July 2020 – September 2020',
+    period: 'Jul 2020 – Sep 2020',
     details: [
       'NLP volunteer for the literature review interface team.',
       'Published a dataset chronicling articles on the Spanish flu pandemic.',
@@ -148,7 +147,7 @@ export const volunteering = [
     organization: 'UNICEF - World\'s Largest Lesson',
     logo: '/logos/unicef.png',
     category: 'Education',
-    period: 'April 2019 – August 2019',
+    period: 'Apr 2019 – Aug 2019',
     details: [
       'Contacted schools and pitched the event to them.',
       'Coordinated with schools regarding timings, student count, logistics, and lesson plans.',
@@ -162,7 +161,7 @@ export const volunteering = [
     organization: 'N.G.O. Child\'s Heart',
     logo: '/logos/childsheart.png',
     category: 'Health',
-    period: 'May 2019 – June 2019',
+    period: 'May 2019 – Jun 2019',
     details: [
       'Created marketing and digital content for an NGO for children afflicted with CHD.',
       'International volunteering program in Athens, Greece.',
@@ -175,6 +174,7 @@ export const education = [
   {
     degree: 'M.S. Computer Engineering',
     school: 'New York University',
+    logo: '/logos/nyu.png',
     location: 'New York, NY',
     period: 'May 2024',
     details: 'GPA: 3.8 / 4.0',
@@ -183,8 +183,9 @@ export const education = [
   {
     degree: 'B.Tech Information Technology',
     school: 'Manipal Institute of Technology, MAHE',
+    logo: '/logos/manipal.png',
     location: 'Manipal, India',
-    period: 'July 2022',
+    period: 'Jul 2022',
     details: 'GPA: 8.53 / 10.0 · Minor: Big Data',
     badges: ['Machine Learning', 'Data Science', 'Big Data Analytics', 'NLP'],
   },
@@ -247,42 +248,49 @@ export const projects = [
     description: 'An LLM agent discovers how to complete tasks in a legacy back-office web app, then records each successful run as a typed, versioned capability that replays deterministically with no model in the loop. Includes fault recovery, policy-enforced safety allowlists, and human approval for irreversible actions.',
     tags: ['Python', 'Playwright', 'Gemini', 'LLM Agents', 'Computer Use'],
     link: 'https://github.com/shrutz510/computer-use-automation',
+    image: '/projects/computer-use-automation.jpg',
   },
   {
     title: 'SEC Filing RAG',
     description: 'Retrieval-Augmented Generation (RAG) system for querying SEC filings using natural language. Combines semantic search over financial documents with LLM-based reasoning to deliver accurate, citation-backed answers from 10-K, 10-Q, and 8-K reports.',
     tags: ['RAG', 'LLMs', 'Vector Search', 'NLP', 'Finance'],
     link: 'https://shrutz510.github.io/SEC-Filing-Rag/',
+    image: '/projects/sec-filing-rag.jpg',
   },
   {
     title: 'WavePulse: Real-time Content Analytics of Radio Livestreams',
     description: 'Full-stack platform processing 480,000 hours from 396 radio stations with real-time transcription (WhisperX: 8.4% WER) and LLM-based analysis. Achieved 99.7% availability over 4.5B words.',
     tags: ['React', 'Django', 'PostgreSQL', 'WhisperX', 'LLMs', 'GPU'],
     link: 'https://wave-pulse.io/',
+    image: '/projects/wavepulse.jpg',
   },
   {
     title: 'Image Generation Analysis for Imbalanced Datasets',
     description: 'Tackled class imbalance by analyzing different image generation techniques on the CIFAR10 dataset using non-synthetic, GAN, and Stable Diffusion data generation methods, achieving 85.40%, 85.55%, and 86.96% test accuracy respectively.',
     tags: ['PyTorch', 'GANs', 'Stable Diffusion', 'Computer Vision', 'CIFAR10'],
     link: 'https://github.com/uasth/ImageGenAnalysis',
+    image: '/projects/image-gen-analysis.jpg',
   },
   {
     title: 'Distributed Data Parallelism for Language Models',
     description: 'Implemented a scalable deep learning pipeline using PyTorch\'s distributed data parallelism module to train a German-to-English translation model, achieving a speedup of 20 times on 4 GPUs versus a single CPU with a train loss of 1.14.',
     tags: ['PyTorch', 'Distributed Training', 'NLP', 'GPU'],
     link: 'https://github.com/shrutz510/Distributed-Data-Parallelism-for-Translator',
+    image: '/projects/distributed-data-parallelism.jpg',
   },
   {
     title: 'Finance ML System: Loan Default Prediction',
     description: 'Created a model to predict prospective borrowers\' default probability to enhance the bank\'s loan underwriting process using time-series analysis, financial feature engineering, and walk-forward analysis for optimal results. Achieved a ROC-AUC of 89.4% on test data.',
     tags: ['XGBoost', 'Time Series', 'Feature Engineering', 'Python'],
     link: 'https://github.com/shrutz510/Loan-Default-Prediction',
+    image: '/projects/loan-default.jpg',
   },
   {
     title: 'ML Pipeline for Airbnb Property Analysis',
     description: 'Gained insight into Airbnb hosts\' and guests\' issues through big-data analysis of the Global Listings dataset using Azure Data Lake Storage for data storage, PySpark for complex computations, and matplotlib for data visualization.',
     tags: ['PySpark', 'Azure', 'Random Forest', 'SQL', 'Data Visualization'],
     link: 'https://github.com/shrutz510/Airbnb-Property-Listing-Analysis',
+    image: '/projects/airbnb-analysis.jpg',
   },
 ];
 
