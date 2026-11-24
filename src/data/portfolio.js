@@ -261,6 +261,20 @@ export const projects = [
     image: '/projects/sec-filing-rag.jpg',
   },
   {
+    title: 'Deal Radar',
+    description: 'A self-hosted deal finder that builds a personalized feed from a few setup questions. Collects products and prices from retailer sites and RSS deal feeds on a schedule, tracks wishlist target prices with desktop alerts, and applies your profile at read time so preference changes need no re-scrape.',
+    tags: ['Python', 'SQLite', 'Web Scraping', 'JavaScript', 'REST API'],
+    link: 'https://github.com/shrutz510/deal-radar',
+    image: '/projects/deal-radar.jpg',
+  },
+  {
+    title: 'Concert Lyrics',
+    description: "Type in an artist and get the lyrics to every song in their latest setlist on one page, ready to read at the show. Pulls setlists from setlist.fm and lyrics from LRCLIB, suggests close matches for typos instead of guessing, and handles covers, rate limits, and missing songs.",
+    tags: ['Python', 'REST APIs', 'Fuzzy Matching', 'Web App'],
+    link: 'https://github.com/shrutz510/concert-lyrics',
+    image: '/projects/concert-lyrics.jpg',
+  },
+  {
     title: 'WavePulse: Real-time Content Analytics of Radio Livestreams',
     description: 'Full-stack platform processing 480,000 hours from 396 radio stations with real-time transcription (WhisperX: 8.4% WER) and LLM-based analysis. Achieved 99.7% availability over 4.5B words.',
     tags: ['React', 'Django', 'PostgreSQL', 'WhisperX', 'LLMs', 'GPU'],
