@@ -6,12 +6,19 @@
   --heading: #3d4856;
   --muted: #5a6b7f;
   --faint: #8a96a6;
-  --border: #e2e8f0;
-  --tint: #f0fdfa;
-  --bg: #ffffff;
+  --border: #e3e8ef;
+  --tint: #ecfdf8;
+  --bg: #f5f7fa;
   --surface: #ffffff;
-  --nav-bg: rgba(255, 255, 255, 0.9);
-  --hover-shadow: 0 4px 20px rgba(13, 148, 136, 0.1);
+  --nav-bg: rgba(255, 255, 255, 0.82);
+  --nav-shadow: 0 1px 0 rgba(15, 23, 42, 0.04), 0 6px 20px rgba(15, 23, 42, 0.06);
+  --shadow: 0 1px 2px rgba(15, 23, 42, 0.05), 0 4px 12px rgba(15, 23, 42, 0.05);
+  --hover-shadow: 0 2px 4px rgba(15, 23, 42, 0.05), 0 14px 32px rgba(13, 148, 136, 0.16);
+  --tag-ring: inset 0 0 0 1px rgba(13, 148, 136, 0.14);
+  --page-glow:
+    radial-gradient(900px 520px at 8% -8%, rgba(20, 184, 166, 0.2), transparent 62%),
+    radial-gradient(800px 480px at 100% 0%, rgba(56, 189, 248, 0.14), transparent 62%);
+  --home-bg: transparent;
   color-scheme: light;
 }
 
@@ -29,6 +36,11 @@
     --surface: #111a22;
     --nav-bg: rgba(11, 17, 23, 0.85);
     --hover-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    --nav-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow: none;
+    --tag-ring: none;
+    --page-glow: none;
+    --home-bg: linear-gradient(135deg, var(--tint) 0%, var(--bg) 100%);
     color-scheme: dark;
   }
 }
@@ -46,6 +58,11 @@
   --surface: #111a22;
   --nav-bg: rgba(11, 17, 23, 0.85);
   --hover-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --nav-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow: none;
+  --tag-ring: none;
+  --page-glow: none;
+  --home-bg: linear-gradient(135deg, var(--tint) 0%, var(--bg) 100%);
   color-scheme: dark;
 }
 
@@ -62,7 +79,8 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: var(--bg);
+  background: var(--page-glow), var(--bg);
+  background-attachment: fixed;
   color: var(--text);
   line-height: 1.7;
   font-size: 16px;
@@ -154,7 +172,7 @@ ul {
   background: var(--nav-bg);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--nav-shadow);
 }
 
 .navbar-inner {
@@ -229,7 +247,7 @@ ul {
 .home {
   padding: 88px 0 40px;
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--tint) 0%, var(--bg) 100%);
+  background: var(--home-bg);
 }
 
 .home .container {
@@ -305,6 +323,7 @@ ul {
 
 .fact {
   background: var(--surface);
+  box-shadow: var(--shadow);
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 14px 18px;
@@ -340,6 +359,7 @@ ul {
 
 .skill-card {
   background: var(--surface);
+  box-shadow: var(--shadow);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 22px 24px;
@@ -381,11 +401,13 @@ ul {
   border-radius: 20px;
   background: var(--tint);
   color: var(--primary);
+  box-shadow: var(--tag-ring);
 }
 
 /* ── Cards (experience, education, publications, projects, volunteering) ── */
 .card {
   background: var(--surface);
+  box-shadow: var(--shadow);
   border: 1px solid var(--border);
   border-radius: 14px;
 }
@@ -404,6 +426,7 @@ ul {
 
 /* Logos are designed for light backgrounds, so their tile stays white in dark mode. */
 .card-logo {
+  box-shadow: var(--shadow);
   width: 48px;
   height: 48px;
   border: 1px solid var(--border);
